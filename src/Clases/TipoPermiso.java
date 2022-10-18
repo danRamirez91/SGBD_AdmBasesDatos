@@ -5,17 +5,7 @@
  */
 package Clases;
 
-/**
- *
- * @author alema
- */
-class Tipo {
+class TipoPermiso {
     String nombre;
-    
-    
-    public Tipo() {
-        
-        
-    }
     
 }

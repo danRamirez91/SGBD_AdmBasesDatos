@@ -3,23 +3,21 @@ package Clases;
 
 import java.util.ArrayList;
 
-public class Tabla {
-    
+
+public class BaseDatos {
     String nombre;
     String descripcion;
-    ArrayList<Campo> campos;
-    
+    ArrayList<Tabla> tablas;
 
-    public Tabla(String nombre, String descripcion,Campo campo) {
+    public BaseDatos(String nombre, String descripcion) {
         this.nombre = nombre;
         this.descripcion = descripcion;
-        campos.add(campo);
-    }
-
-    public void addCampo(Campo campo){
-        campos.add(campo);
     }
     
+    public void addTablas(Tabla tabla){
+        tablas.add(tabla);
+    }
+
     public String getNombre() {
         return nombre;
     }
@@ -35,5 +33,14 @@ public class Tabla {
     public void setDescripcion(String descripcion) {
         this.descripcion = descripcion;
     }
+
+    public ArrayList<Tabla> getTablas() {
+        return tablas;
+    }
+
+    public void setTablas(ArrayList<Tabla> Tablas) {
+        this.tablas = Tablas;
+    }
+    
     
 }

@@ -4,21 +4,19 @@ public class Usuario {
     String id;
     String contrasena;
     String nombre;
-    String apellidoPaterno;
-    String apellidoMaterno;
-    
     Rol rol;
     
     Usuario(){
     }
 
-    public Usuario(String id,String contrasena, String nombre, String apellidoPaterno, String apellidoMaterno) {
+    public Usuario(String id, String contrasena, String nombre, Rol rol) {
         this.id = id;
-        this.contrasena=contrasena;
+        this.contrasena = contrasena;
         this.nombre = nombre;
-        this.apellidoPaterno = apellidoPaterno;
-        this.apellidoMaterno = apellidoMaterno;
+        this.rol = rol;
     }
+
+    
 
     public String getId() {
         return id;
@@ -42,22 +40,6 @@ public class Usuario {
 
     public void setNombre(String nombre) {
         this.nombre = nombre;
-    }
-
-    public String getApellidoPaterno() {
-        return apellidoPaterno;
-    }
-
-    public void setApellidoPaterno(String apellidoPaterno) {
-        this.apellidoPaterno = apellidoPaterno;
-    }
-
-    public String getApellidoMaterno() {
-        return apellidoMaterno;
-    }
-
-    public void setApellidoMaterno(String apellidoMaterno) {
-        this.apellidoMaterno = apellidoMaterno;
     }
 
     public Rol getRol() {
