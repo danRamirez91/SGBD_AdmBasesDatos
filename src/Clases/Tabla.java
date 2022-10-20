@@ -5,12 +5,14 @@ import java.util.ArrayList;
 
 public class Tabla {
     
+    int id;
     String nombre;
     String descripcion;
     ArrayList<Campo> campos;
     
 
-    public Tabla(String nombre, String descripcion,Campo campo) {
+    public Tabla(int id,String nombre, String descripcion,Campo campo) {
+        this.id = id;
         this.nombre = nombre;
         this.descripcion = descripcion;
         campos.add(campo);
@@ -18,6 +20,14 @@ public class Tabla {
 
     public void addCampo(Campo campo){
         campos.add(campo);
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
     
     public String getNombre() {

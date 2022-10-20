@@ -57,6 +57,7 @@ public class paginaPrincipal extends javax.swing.JFrame {
         editarRegistros = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setPreferredSize(new java.awt.Dimension(503, 387));
 
         contentPanel.setLayout(new java.awt.CardLayout());
 
@@ -187,7 +188,7 @@ public class paginaPrincipal extends javax.swing.JFrame {
 
     private void editarTablaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_editarTablaActionPerformed
         // TODO add your handling code here:
-       tablasPanel t1 = new tablasPanel();
+       tablaPanel t1 = new tablaPanel();
         t1.setSize(503,634);
         t1.setLocation(0,0);
         
