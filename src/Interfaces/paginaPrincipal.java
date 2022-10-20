@@ -43,102 +43,46 @@ public class paginaPrincipal extends javax.swing.JFrame {
     private void initComponents() {
 
         contentPanel = new javax.swing.JPanel();
-        seleccionBD = new javax.swing.JPanel();
-        editarPanel = new javax.swing.JPanel();
-        jLabel2 = new javax.swing.JLabel();
-        lecturaPanel = new javax.swing.JPanel();
-        jLabel3 = new javax.swing.JLabel();
         jMenuBar1 = new javax.swing.JMenuBar();
-        jMenu1 = new javax.swing.JMenu();
-        jMenuItem1 = new javax.swing.JMenuItem();
+        btnMenuSeleccionar = new javax.swing.JMenu();
+        btnSeleccionarBDMenu = new javax.swing.JMenuItem();
+        btnCrearBDMenu = new javax.swing.JMenuItem();
         Tablas = new javax.swing.JMenu();
         editarTabla = new javax.swing.JMenuItem();
+        jMenuItem1 = new javax.swing.JMenuItem();
         registrosMenu = new javax.swing.JMenu();
         editarRegistros = new javax.swing.JMenuItem();
+        jMenuItem2 = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setPreferredSize(new java.awt.Dimension(503, 387));
+        setResizable(false);
 
         contentPanel.setLayout(new java.awt.CardLayout());
 
-        javax.swing.GroupLayout seleccionBDLayout = new javax.swing.GroupLayout(seleccionBD);
-        seleccionBD.setLayout(seleccionBDLayout);
-        seleccionBDLayout.setHorizontalGroup(
-            seleccionBDLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 503, Short.MAX_VALUE)
-        );
-        seleccionBDLayout.setVerticalGroup(
-            seleccionBDLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 364, Short.MAX_VALUE)
-        );
+        btnMenuSeleccionar.setText("Base de Datos");
 
-        contentPanel.add(seleccionBD, "card2");
-
-        jLabel2.setText("Tablas");
-
-        javax.swing.GroupLayout editarPanelLayout = new javax.swing.GroupLayout(editarPanel);
-        editarPanel.setLayout(editarPanelLayout);
-        editarPanelLayout.setHorizontalGroup(
-            editarPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 503, Short.MAX_VALUE)
-            .addGroup(editarPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(editarPanelLayout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jLabel2)
-                    .addGap(0, 0, Short.MAX_VALUE)))
-        );
-        editarPanelLayout.setVerticalGroup(
-            editarPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 364, Short.MAX_VALUE)
-            .addGroup(editarPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(editarPanelLayout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jLabel2)
-                    .addGap(0, 0, Short.MAX_VALUE)))
-        );
-
-        contentPanel.add(editarPanel, "card3");
-
-        jLabel3.setText("Lectura");
-
-        javax.swing.GroupLayout lecturaPanelLayout = new javax.swing.GroupLayout(lecturaPanel);
-        lecturaPanel.setLayout(lecturaPanelLayout);
-        lecturaPanelLayout.setHorizontalGroup(
-            lecturaPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 503, Short.MAX_VALUE)
-            .addGroup(lecturaPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(lecturaPanelLayout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jLabel3)
-                    .addGap(0, 0, Short.MAX_VALUE)))
-        );
-        lecturaPanelLayout.setVerticalGroup(
-            lecturaPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 364, Short.MAX_VALUE)
-            .addGroup(lecturaPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(lecturaPanelLayout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jLabel3)
-                    .addGap(0, 0, Short.MAX_VALUE)))
-        );
-
-        contentPanel.add(lecturaPanel, "card4");
-
-        jMenu1.setText("Base de Datos");
-
-        jMenuItem1.setText("Seleccionar BD");
-        jMenuItem1.addActionListener(new java.awt.event.ActionListener() {
+        btnSeleccionarBDMenu.setText("Seleccionar BD");
+        btnSeleccionarBDMenu.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem1ActionPerformed(evt);
+                btnSeleccionarBDMenuActionPerformed(evt);
             }
         });
-        jMenu1.add(jMenuItem1);
+        btnMenuSeleccionar.add(btnSeleccionarBDMenu);
 
-        jMenuBar1.add(jMenu1);
+        btnCrearBDMenu.setText("Crear BD");
+        btnCrearBDMenu.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnCrearBDMenuActionPerformed(evt);
+            }
+        });
+        btnMenuSeleccionar.add(btnCrearBDMenu);
+
+        jMenuBar1.add(btnMenuSeleccionar);
 
         Tablas.setText("Tablas");
 
-        editarTabla.setText("Editar");
+        editarTabla.setText("Ver Tablas");
         editarTabla.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 editarTablaActionPerformed(evt);
@@ -146,17 +90,28 @@ public class paginaPrincipal extends javax.swing.JFrame {
         });
         Tablas.add(editarTabla);
 
+        jMenuItem1.setText("Crear Tabla");
+        jMenuItem1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem1ActionPerformed(evt);
+            }
+        });
+        Tablas.add(jMenuItem1);
+
         jMenuBar1.add(Tablas);
 
         registrosMenu.setText("Registros");
 
-        editarRegistros.setText("Editar");
+        editarRegistros.setText("Ver Registros");
         editarRegistros.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 editarRegistrosActionPerformed(evt);
             }
         });
         registrosMenu.add(editarRegistros);
+
+        jMenuItem2.setText("Crear Registro");
+        registrosMenu.add(jMenuItem2);
 
         jMenuBar1.add(registrosMenu);
 
@@ -188,7 +143,7 @@ public class paginaPrincipal extends javax.swing.JFrame {
 
     private void editarTablaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_editarTablaActionPerformed
         // TODO add your handling code here:
-       tablaPanel t1 = new tablaPanel();
+       verTablasPanel t1 = new verTablasPanel();
         t1.setSize(503,634);
         t1.setLocation(0,0);
         
@@ -202,12 +157,36 @@ public class paginaPrincipal extends javax.swing.JFrame {
 
     private void editarRegistrosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_editarRegistrosActionPerformed
         // TODO add your handling code here:
-        editarPanel.setVisible(true);
+        
     }//GEN-LAST:event_editarRegistrosActionPerformed
+
+    private void btnSeleccionarBDMenuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSeleccionarBDMenuActionPerformed
+        // TODO add your handling code here:
+        basesDatos s1 = new basesDatos();
+        s1.setSize(503,634);
+        s1.setLocation(0,0);
+        
+        contentPanel.removeAll();
+        contentPanel.add(s1, BorderLayout.CENTER);
+        contentPanel.revalidate();
+        contentPanel.repaint();
+    }//GEN-LAST:event_btnSeleccionarBDMenuActionPerformed
+
+    private void btnCrearBDMenuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCrearBDMenuActionPerformed
+        // TODO add your handling code here:
+        crearBaseDPanel s1 = new crearBaseDPanel();
+        s1.setSize(503,634);
+        s1.setLocation(0,0);
+        
+        contentPanel.removeAll();
+        contentPanel.add(s1, BorderLayout.CENTER);
+        contentPanel.revalidate();
+        contentPanel.repaint();
+    }//GEN-LAST:event_btnCrearBDMenuActionPerformed
 
     private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
         // TODO add your handling code here:
-        basesDatos s1 = new basesDatos();
+         crearTablaPanel s1 = new crearTablaPanel();
         s1.setSize(503,634);
         s1.setLocation(0,0);
         
@@ -257,17 +236,15 @@ public class paginaPrincipal extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JMenu Tablas;
+    private javax.swing.JMenuItem btnCrearBDMenu;
+    private javax.swing.JMenu btnMenuSeleccionar;
+    private javax.swing.JMenuItem btnSeleccionarBDMenu;
     private javax.swing.JPanel contentPanel;
-    private javax.swing.JPanel editarPanel;
     private javax.swing.JMenuItem editarRegistros;
     private javax.swing.JMenuItem editarTabla;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JMenu jMenu1;
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JMenuItem jMenuItem1;
-    private javax.swing.JPanel lecturaPanel;
+    private javax.swing.JMenuItem jMenuItem2;
     private javax.swing.JMenu registrosMenu;
-    private javax.swing.JPanel seleccionBD;
     // End of variables declaration//GEN-END:variables
 }

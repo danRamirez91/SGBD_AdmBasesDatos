@@ -32,6 +32,8 @@ public class basesDatos extends javax.swing.JPanel {
         listaBD = new javax.swing.JList<>();
         jButton1 = new javax.swing.JButton();
 
+        setPreferredSize(new java.awt.Dimension(503, 364));
+
         jLabel1.setText("Bases de Datos");
 
         listaBD.setModel(new javax.swing.AbstractListModel<String>() {
@@ -58,7 +60,7 @@ public class basesDatos extends javax.swing.JPanel {
                     .addGroup(layout.createSequentialGroup()
                         .addGap(145, 145, 145)
                         .addComponent(jButton1)))
-                .addContainerGap(47, Short.MAX_VALUE))
+                .addContainerGap(35, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -69,7 +71,7 @@ public class basesDatos extends javax.swing.JPanel {
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(jButton1)
-                .addContainerGap(54, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
