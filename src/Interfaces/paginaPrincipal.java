@@ -8,10 +8,8 @@ package Interfaces;
 import java.awt.BorderLayout;
 import javax.swing.JPanel;
 
-/**
- *
- * @author alema
- */
+
+
 public class paginaPrincipal extends javax.swing.JFrame {
 
     /**
@@ -22,7 +20,7 @@ public class paginaPrincipal extends javax.swing.JFrame {
     public paginaPrincipal() {
         initComponents();
         
-        basesDatos p1 = new basesDatos();
+        verBDPanel p1 = new verBDPanel();
         p1.setSize(503,634);
         p1.setLocation(0,0);
         
@@ -162,7 +160,7 @@ public class paginaPrincipal extends javax.swing.JFrame {
 
     private void btnSeleccionarBDMenuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSeleccionarBDMenuActionPerformed
         // TODO add your handling code here:
-        basesDatos s1 = new basesDatos();
+        verBDPanel s1 = new verBDPanel();
         s1.setSize(503,634);
         s1.setLocation(0,0);
         
